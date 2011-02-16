@@ -27,9 +27,8 @@
  
       <%= f.label "Tags" %> 
          <span class="small">ie. button, round, gradient, svg</span> <br/>
-       <input type="text" id="tag"> <%= link_to "Add Tag", new_tag_path(), :remote => true %>
-       <%= f.hidden_field :tags, :id=>"tags"%>
-       <ul id="tags-new" class="tags"></ul>
+       <input type="text" id="tag" >  
+       <input type="hidden" name="tags">
         
     <button class="cupid-blue center big-button">Post Snippet</button> 
  <% end %>
@@ -41,7 +40,8 @@
     var tags = [];
     $(function() {  
         
-        $("tag").autoSuggest("/tags/index.js");
+        $("#tag").autoSuggest("/tags.json", {"startText": 'Enter Tag Name', asHtmlID:"tags", selectedItemProp: "name", searchObjProps: "name", selectedValuesProp: "name"});
+        
 
         $(".tag-delete").live('click',function(){
             tags.splice(tags.indexOf($(this).val()), 1);

@@ -35,9 +35,8 @@ class SnippetsController < ApplicationController
   def create
     @snippet = Snippet.new(params[:snippet])
     @snippet.user_id = session[:user_id]
-    @snippet.tag_list = params[:snippet][:tags]
-    
-    if @snippet.save
+    @snippet.tag_list = params[:as_values_tags]
+     if @snippet.save
       flash[:notice] = "Successfully created snippet."
       redirect_to @snippet
     else

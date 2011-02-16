@@ -10,7 +10,7 @@ Html5snippets::Application.routes.draw do
   match '/snippets/:id/run' => 'snippets#run', :as => :run
   match '/auth/twitter/callback' => "sessions#create"
   match '/signout' => "sessions#destroy", :as => :signout
-  match '/voteup/:snippet_id' => "votes#voteup", :as => :voteup
+  match '/voteup/:snippet_id' => "votes#voteup", :as => :voteup 
   match '/snippets/sort/:sort_by' => 'snippets#index', :as => :sort
   match '/user/:username/saved' => 'saves#index', :as => :saved
   # The priority is based upon order of creation:
