@@ -48,9 +48,9 @@
 
 <pre id="sourcecode" class="brush: css; html-script: true; " ><code><%= @snippet.code %></code></pre>
 
-
+<%if @snippet.reports_count <= 1%> 
     <%= link_to "Run Snippet", run_path(), :target => "_blank", :class=>"rounded5", :id=>"rundemo"%>
-
+<%end%>
 <div id="actions">
 
 <% if current_user%>
@@ -76,10 +76,7 @@
         <% end %>
     </div>
 
-
-    
-
-  <%if current_user == @snippet.user%>
+<%if current_user == @snippet.user%>
 
 <p>
   <%= link_to "Edit", edit_snippet_path(@snippet) %> |
@@ -92,8 +89,6 @@
   <%= link_to "View All Snippets", snippets_path %>
 </p>
 <script>
-
-    
     SyntaxHighlighter.all();
     
     $(function(){

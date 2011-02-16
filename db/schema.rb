@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110211224857) do
+ActiveRecord::Schema.define(:version => 20110216080909) do
 
   create_table "reports", :force => true do |t|
     t.integer  "snippet_id"
@@ -30,9 +30,11 @@ ActiveRecord::Schema.define(:version => 20110211224857) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
-    t.integer  "points",      :default => 0
-    t.integer  "views",       :default => 0
-    t.integer  "votes_count", :default => 0
+    t.integer  "points",        :default => 0
+    t.integer  "views",         :default => 0
+    t.integer  "votes_count",   :default => 0
+    t.integer  "reports_count"
+    t.integer  "saves_count"
   end
 
   create_table "taggings", :force => true do |t|
