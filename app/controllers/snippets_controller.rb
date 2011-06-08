@@ -6,7 +6,9 @@ class SnippetsController < ApplicationController
   
     @sort=params[:sort_by]
     
-    @tags = Snippet.tag_counts_on(:tags).limit(25)
+    @tags =  Snippet.tag_counts_on(:tags).sort!{|a,b| b.count <=> a.count}
+    @tags=@tags[0..25]
+    
     @snippets = Snippet.search(params[:search]).sortby(@sort).order("created_at desc")
     print Snippet.tag_counts
     @request=Request.new()
@@ -42,6 +44,7 @@ class SnippetsController < ApplicationController
           gb <=> ga
       end
     end
+    
     @snippets=@snippets.paginate(:per_page => 10, :page => params[:page])
     
     session[:next]=nil
