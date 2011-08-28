@@ -32,18 +32,18 @@ class SnippetsController < ApplicationController
       
     #@snippets.sort! { |a,b| a.g <=> b.g}
     
-    unless @sort
-      @snippets.sort! do |a,b|
-         ta=(Time.now - a.created_at)/(1000*60) 
-         pa=a.votes_count
-         ga=(pa - 1) / (ta + 2)**1.5
-      
-         tb=(Time.now - b.created_at)/(1000*60) 
-         pb=b.votes_count
-         gb=(pb - 1) / (tb + 2)**1.5
-          gb <=> ga
-      end
-    end
+    # unless @sort
+    #       @snippets.sort! do |a,b|
+    #          ta=(Time.now - a.created_at)/(1000*60) 
+    #          pa=a.votes_count
+    #          ga=(pa - 1) / (ta + 2)**1.5
+    #       
+    #          tb=(Time.now - b.created_at)/(1000*60) 
+    #          pb=b.votes_count
+    #          gb=(pb - 1) / (tb + 2)**1.5
+    #           gb <=> ga
+    #       end
+    #     end
     
     @snippets=@snippets.paginate(:per_page => 10, :page => params[:page])
     
