@@ -48,12 +48,12 @@ href="/snippets.rss" />
   </div>
   
   <div id="right-column">
-   
+
+<ul class="list-tags">
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-
-    <%= link_to tag.name,  snippets_path(:tag=>tag.name),:class => "tag rounded10 " + css_class %> <br/>
+   <li> <%= link_to tag.name,  snippets_path(:tag=>tag.name),:class => "tag rounded10 " + css_class %>
 <% end %>
-
+</ul>
   </div>
    
  
