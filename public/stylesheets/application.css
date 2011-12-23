@@ -481,10 +481,10 @@ label {
 }
 
 #right-column{
-	padding: 35px 10px 10px 10px;
-	text-align: center;
-    position:relative;
-    left:4px;
+ 	text-align: center;
+    width:120px;
+    float:right;
+    
 }
 
 .list-tags{
@@ -644,9 +644,9 @@ label {
 }
 
 #search {
-	float: right;
-	margin-top: -2px;
-	margin-right: 8px;
+position:relative;
+left:355px;
+top:-12px;
 }
 
 #search input {
