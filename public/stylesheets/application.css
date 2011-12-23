@@ -481,9 +481,10 @@ label {
 }
 
 #right-column{
-	float: right;
 	padding: 35px 10px 10px 10px;
 	text-align: center;
+    position:relative;
+    left:4px;
 }
 
 .list-tags{
