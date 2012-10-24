@@ -75,6 +75,8 @@ class SnippetsController < ApplicationController
   end
   
   def new
+    redirect_to "/"
+    return
     unless current_user
       session[:next]=new_snippet_path()
       redirect_to "/login"
