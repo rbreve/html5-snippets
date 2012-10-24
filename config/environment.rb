@@ -10,6 +10,6 @@ ActionMailer::Base.smtp_settings = {
   :port => '25',
   :domain => "html5snippets.com",
   :authentication => :plain,
-  :user_name => "rbreve@gmail.com",
-  :password => "asylum02"
+  :user_name => "yourusername",
+  :password => "yourpass"
 }

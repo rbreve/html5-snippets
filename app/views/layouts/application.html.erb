@@ -2,14 +2,11 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "HTML5 Snippets" %></title>
-<meta name="verifyownership" content="431cac399cc9f48b69e460ac3a6274a9" />
-    
+     
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
 
-    <script type="text/javascript" src="http://use.typekit.com/fke3zcj.js?1234"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    
+     
     <%= csrf_meta_tag %>
     
     <%= yield(:head) %>
@@ -77,9 +74,7 @@
     
     </div> 
   
-      <div id="flash_notice" style="width:700px; margin:auto;">
-             The add snippet has been disabled, this site will remain only as an archival reference for snippets, thanks to everyone who participated in this small project. 
-         </div>
+      
     <div id="container" class="rounded10 bigborder">
         
         <div id="wrapper">
@@ -103,9 +98,8 @@
       })();
     </script>
      
-    <div id="footer">Html5Snippets allows you to share html5 snippets. It's an small experimental project created by <a href="http://twitter.com/rbreve" target="_blank">Roberto Brevé</a>, currently in very alpha mode.<br/>
-    <a href="http://twitter.com/html5snippets" target="_blank">Follow us on twitter</a> | <a href="http://rbreve.wufoo.com/forms/m7x3p9/" onclick="window.open(this.href,  null, 'height=514, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Contact Us">Contact Us</a>
-    <p> <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />User contribution is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+    <div id="footer">
+    <p> Footer
     </p>
     </div>
     

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Html5snippets::Application.config.secret_token = '07388d7f2d2766a1205663f0bdd137c9f03a1c4a47d347939795df0829681a95e3aca7bfc44975010f464333af9d1372cd3b45d35d5b10c3c027bd97a4fa1588'
+Html5snippets::Application.config.secret_token = '2342342342342342342423423423423423423c423c23c432c342cdfsggsdgsdgsdgsdgddsgdsgdfgsdgsds44sdh7jhe'
